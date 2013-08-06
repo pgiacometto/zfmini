@@ -1,0 +1,66 @@
+<H3>chao</H3>
+
+<A href="/mundo/add">Agregar</A>
+<table>
+    <tr>
+        <td style="width:50px">
+           ID POST
+        </td>
+         <td style="width:250px">
+           TITULO
+        </td>
+         <td style="width:550px">
+           CONTENIDO
+        </td>
+         <td style="width:150px">
+           FECHA
+        </td>
+        <td style="width:50px">
+           
+        </td>
+        <td style="width:50px">
+          
+        </td>
+    </tr>
+    <?php if(count($this->paginator)):?>
+        <?php foreach ($this->paginator as $post):?>
+     <tr>
+        <td>
+           <?php echo $post->idpost;?>
+        </td>
+         <td>
+           <?php echo $post->titulo;?>
+        </td>
+        <td>
+           <?php echo $post->contenido;?>
+        </td>
+         <td>
+           <?php echo $post->fecha;?>
+        </td>
+        <td>
+            <A href="/mundo/update/id/<?php echo $post->idpost;?>">Editar</A>
+        </td>
+        <td>
+            <A href="/mundo/delete/id/<?php echo $post->idpost;?>">Eliminar</A>
+        </td>
+    </tr>
+        
+        <?php endforeach;?>
+    <?php else:?>
+    <tr>
+        <td colspan="5">
+            <?php echo $this->errorBox("No Hay POST");?>
+        </td>
+    </tr>
+   <?php endif;?>
+    
+    <?php if(count($this->paginator)):?>
+    <tr>
+        <TD colspan="5">
+            <?php echo $this->paginator;?>
+        </TD>
+    </tr>
+       
+    <?php endif;?>
+</table>
+

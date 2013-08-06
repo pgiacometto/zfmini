@@ -1,0 +1,22 @@
+/* 
+    Document   : style
+    Created on : 22/07/2013, 06:23:57 PM
+    Author     : Luis Ritter
+    Description:
+        Purpose of the stylesheet follows.
+*/
+body {
+	background-color:#eee;
+	font-size:14px;
+	font-family:Verdana, Geneva, sans-serif;
+}
+
+h3{
+	font-size:16px;
+	font-weight:bold;
+}
+
+.footer{
+    font-size: 8px;
+    
+}
